@@ -39,7 +39,7 @@ The maximum gap size can be described as `key + (key - 2)` and the resulting for
 
 Additionally in every row before index `1` a gap can be found. This gap corresponds to the current row number and therefore can be described with simply `n`.
 
-The algorithm in `gartenzaun_index_function(...)` simply counts the amount of uneven and even indexes up (for this example called `a` and `b`) until the desired index, multiplies those with the corresponding gap size for the current row and then sums up both products up and adds the initial starting gap.
+The algorithm in `gartenzaun_index_function(...)` simply counts the amount of uneven and even indexes up (for this example called `a` and `b`) until the desired index, multiplies those with the corresponding gap size for the current row and then sums up both products and adds the initial starting gap.
 
 The final formula is `n + a * (2 * n) + b * (key + (key - 2) - 2 * n)`.
 
