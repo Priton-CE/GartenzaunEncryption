@@ -13,23 +13,22 @@
  */
 int gartenzaun_index_function(unsigned int m, unsigned int n, unsigned int i)
 {
-    // determine amount of even and uneven regions up until the index
-    unsigned int even   = (int) floor( (double)i / 2.0 );
-    unsigned int uneven = (int) ceil ( (double)i / 2.0 );
-
     // define gap sizes in relation to the dimensions of the rail fence cipher
-    unsigned int smallgap = (m + (m - 2) - 2 * n);
-    unsigned int biggap = 2 * n;
-
-    if (n == m - 1) {
-        int tmp = biggap;
-        biggap = smallgap;
-        smallgap = tmp;
-    }
-    if (biggap == 0) biggap = smallgap;
+    unsigned int uneven_gap =               2 * n;
+    unsigned int even_gap   = m + (m - 2) - 2 * n;
 
     // return where the passed index would be in the rail fence cipher
-    return n + even * biggap + uneven * smallgap;
+    if (n == 0)
+        return n + i * even_gap;
+    else if (n == m - 1)
+        return n + i * uneven_gap;
+    else {
+        // determine amount of even and uneven regions up until the index
+        unsigned int uneven = (int) floor( (double)i / 2.0 );
+        unsigned int even   = (int) ceil ( (double)i / 2.0 );
+
+        return n + uneven * uneven_gap + even * even_gap;
+    }
 }
 
 
