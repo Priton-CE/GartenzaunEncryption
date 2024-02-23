@@ -9,3 +9,4 @@ set(SOURCE_FILES
 )
 
 add_executable(gartenzaun ${SOURCE_FILES})
+target_link_libraries(gartenzaun m)
