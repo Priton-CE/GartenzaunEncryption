@@ -1,7 +1,3 @@
-## Note
-
-This project is unfinished.
-
 # Gartenzaun Encryption
 
 This project encrypts and decrypts text using the rail fence cipher ("Gartenzaun Cipher" in German).
