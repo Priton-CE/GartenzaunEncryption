@@ -11,8 +11,8 @@ This project encrypts and decrypts text using the rail fence cipher ("Gartenzaun
 ## Example
 
 ``` text
-$ ./gartenzaun -e 4 rail_fence_cipher_test
-reitafncp_ei_c_hrsleet
+$ ./gartenzaun -e 5 rail_fence_cipher_test
+rcranee_ie_htlfcpet_is
 ```
 
 
