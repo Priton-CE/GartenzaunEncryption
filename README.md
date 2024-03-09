@@ -4,11 +4,17 @@ This project encrypts and decrypts text using the rail fence cipher ("Gartenzaun
 
 ## Usage
 
-TODO
+- `./gartenzaun [-e | -d] <key> <text>...` for passing text to be encrypted or decrypted.
+
+- `./gartenzaun [-e | -d] <key>` for writing text to stdin to be encrypted or decrypted.
 
 ## Example
 
-TODO
+``` text
+$ ./gartenzaun -e 4 rail_fence_cipher_test
+reitafncp_ei_c_hrsleet
+```
+
 
 # Documentation
 
