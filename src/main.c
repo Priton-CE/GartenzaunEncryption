@@ -23,7 +23,6 @@ void print_help() {
 
 void static_process(char* input, int length, int key, bool encrypt) {
     char output[length];
-    printf("%lu\n", strlen(input));
 
     if (encrypt)
         gartenzaun_encrypt(input, output, length - 1, key);
@@ -72,7 +71,6 @@ void dynamic_process(int key, bool encrypt) {
         }
 
         char* output = malloc((stepsize * step + 1) * sizeof(char));
-        printf("%lu\n", strlen(input));
 
         if (encrypt)
             gartenzaun_encrypt(input, output, strlen(input), key);
